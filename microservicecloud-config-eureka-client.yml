@@ -1,0 +1,52 @@
+﻿server:
+    port: 7001 #服务器注册中心占用7001端口
+    
+spring:
+    profiles: dev
+    application:
+        name: microservicecloud-config-eureka-client
+        
+
+
+eureka:
+    instance:
+        hostname: eureka7001.com 
+    client: 
+        register-with-eureka: false  #当前应用是服务器不需要注册到列表中
+        fetch-registry: false #不通过rureka获取注册信息
+        service-url: 
+            defaultZone: http://eureka7001.com:7001/eureka/
+            
+---
+
+server:
+    port: 7001 #服务器注册中心占用7001端口
+    
+spring:
+    profiles: test
+    application:
+        name: microservicecloud-config-eureka-client
+        
+eureka:
+    instance:
+        hostname: eureka7001.com 
+    client: 
+        register-with-eureka: false  #当前应用是服务器不需要注册到列表中
+        fetch-registry: false #不通过rureka获取注册信息
+        service-url: 
+            defaultZone: http://eureka7001.com:7001/eureka/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
