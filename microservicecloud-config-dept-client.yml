@@ -5,6 +5,7 @@
 ---
 server:
   port: 8001
+  
 spring:
    profiles: dev
    application:
@@ -44,7 +45,7 @@ info:
   build.version: $project.version$   
   
  
- ---
+---
 server:
   port: 8001
 spring:
